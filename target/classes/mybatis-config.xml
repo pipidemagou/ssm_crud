@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis的核心配置文件-->
+<configuration>
+  <!--  日志-->
+  <settings>
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+  </settings>
+  <typeAliases>
+    <package name="cn.itcast.bean"/>
+  </typeAliases>
+  <!--  引入分页插件-->
+  <plugins>
+    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+      <!--    分页合理化-->
+      <property name="reasonable" value="true"/>
+    </plugin>
+  </plugins>
+</configuration>
